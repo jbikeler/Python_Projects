@@ -8,7 +8,7 @@ class MyObj():
     
     def changePrivate(self, newVar):
         self.__privateVar = newVar
-        return self.__privateVar
+        return self.__privateVa
     
 
 if __name__ == '__main__':
