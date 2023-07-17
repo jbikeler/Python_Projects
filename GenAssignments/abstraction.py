@@ -5,6 +5,9 @@ class Vehicle(ABC):
     @abstractmethod
     def go(self):
         pass
+
+    def getText(self):
+        return ("I am a vehicle.")
     
 class Car(Vehicle):
     
@@ -12,4 +15,5 @@ class Car(Vehicle):
         print("This should now go!")
 
 myObj = Car()
+print(myObj.getText())
 myObj.go()
