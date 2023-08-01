@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://fonts.goodleapis.com/css?famly=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="//fonts.goodleapis.com/css?family=Lobster&subset=latin,latin-ext" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+</head>
+<body>
+        
+        <div class="page_container">
+            {% include "navbar.html"%}
+            <header class="header-title">
+                <h1>{% block header %}{% endblock %}</h1>
+            </header>
+            {% block content %}{% endblock %}
+
+        </div>
+        {% include "footer.html" %}
+</body>
+</html>
